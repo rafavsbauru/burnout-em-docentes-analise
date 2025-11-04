@@ -233,7 +233,7 @@ if df is not None and not df.empty:
             'Nenhum': None,
             'Idade vs. Burnout': ('b1_1_idade', 'ET', 'Idade e Indício de Burnout', 'Idade (anos)', 'Escore Total de Indício de Burnout (20-100)', 'gray'),
             'Tempo de Profissão vs. Burnout': ('b3_2_tempo_profissao', 'ET', 'Tempo de Profissão e Indício de Burnout', 'Tempo de Profissão (anos)', 'Escore Total de Indício de Burnout (20-100)', 'cyan'),
-            'Carga Horária vs. Burnout': ('b3_5_carga_horaria', 'ET', 'Carga Horária e Indício de Burnout', 'Carga Horária Semanal (horas)', 'Escore Total de Burnout (20-100)', 'red'),
+            'Carga Horária vs. Burnout': ('b3_5_carga_horaria', 'ET', 'Carga Horária e Indício de Burnout', 'Carga Horária Semanal (horas)', 'Escore Total de Indício de Burnout (20-100)', 'red'),
             'Carga Administrativa vs. Burnout': ('b3_9_carga_administrativa', 'ET', 'Carga Administrativa e Indício de Burnout', 'Percepção Carga Administrativa (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'purple'),
             'Apoio da Gestão vs. Burnout': ('b4_7_apoio_gestao_escolar', 'ET', 'Apoio da Gestão e Indício de Burnout', 'Percepção Apoio da Gestão (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'green'),
             'Lazer vs. Burnout': ('b2_3_tempo_energia_lazer', 'ET', 'Lazer e Indício de Burnout', 'Percepção Tempo/Energia p/ Lazer (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'blue'),
