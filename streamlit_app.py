@@ -36,8 +36,9 @@ st.markdown(f"""
 # --- FIM CSS ---
 
 st.title("A RELAÇÃO ENTRE A CARGA DE TRABALHO DOCENTE E O BURNOUT")
-st.markdown("Análise do Equilíbrio entrea a Demanda Profissional e o Bem-estar")
-st.markdown("Hiro, Rafaela e Maria")
+st.markdown("Análise do Equilíbrio entre a Demanda Profissional e o Bem-estar")
+st.markdown("Dashboard Versão 2: Correlações e Comparações entre Grupos")
+st.markdown("Autores: Hiro Martins Santos, Maria Clara da Silva e Rafaela Vieira dos Santos")
 
 
 # --- Função SIMPLES para carregar dados JÁ LIMPOS do disco ---
