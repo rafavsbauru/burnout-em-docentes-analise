@@ -36,7 +36,7 @@ st.markdown(f"""
 # --- FIM CSS ---
 
 st.title("A RELAÇÃO ENTRE A CARGA DE TRABALHO DOCENTE E O BURNOUT")
-st.markdown("Análise Interativa do Equilíbrio entre Demanda e Bem-estar")
+st.markdown("Análise do Equilíbrio entre Demanda Profissional e Bem-estar")
 st.markdown("Hiro, Rafaela e Maria")
 
 
@@ -234,25 +234,25 @@ if df is not None and not df.empty:
             'Idade vs. Burnout': ('b1_1_idade', 'ET', 'Idade e Indício de Burnout', 'Idade (anos)', 'Escore Total de Indício de Burnout (20-100)', 'gray'),
             'Tempo de Profissão vs. Burnout': ('b3_2_tempo_profissao', 'ET', 'Tempo de Profissão e Indício de Burnout', 'Tempo de Profissão (anos)', 'Escore Total de Indício de Burnout (20-100)', 'cyan'),
             'Carga Horária vs. Burnout': ('b3_5_carga_horaria', 'ET', 'Carga Horária e Indício de Burnout', 'Carga Horária Semanal (horas)', 'Escore Total de Indício de Burnout (20-100)', 'red'),
-            'Carga Administrativa vs. Burnout': ('b3_9_carga_administrativa', 'ET', 'Carga Administrativa e Indício de Burnout', 'Percepção Carga Administrativa (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'purple'),
-            'Apoio da Gestão vs. Burnout': ('b4_7_apoio_gestao_escolar', 'ET', 'Apoio da Gestão e Indício de Burnout', 'Percepção Apoio da Gestão (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'green'),
-            'Lazer vs. Burnout': ('b2_3_tempo_energia_lazer', 'ET', 'Lazer e Indício de Burnout', 'Percepção Tempo/Energia p/ Lazer (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'blue'),
-            'Autocuidado vs. Burnout': ('b2_2_frequencia_autocuidado', 'ET', 'Autocuidado e Indício de Burnout', 'Frequência de Autocuidado (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'darkgreen'),
-            'Burnout vs. Intenção de Abandonar': ('ET', 'b4_5_intencao_abandonar_profissao', 'Burnout e Intenção de Abandonar', 'Escore Total de Indício de Burnout (20-100)', 'Intenção de Abandonar (1-5)', 'orange'),
-            'Autocuidado vs. Lazer': ('b2_2_frequencia_autocuidado', 'b2_3_tempo_energia_lazer', 'Correlação entre Autocuidado e Lazer', 'Frequência de Autocuidado (1-5)', 'Percepção Tempo/EnergIA p/ Lazer (1-5)', 'blueviolet')
+            'Carga Administrativa vs. Burnout': ('b3_9_carga_administrativa', 'ET', 'Carga Administrativa e Indício de Burnout', 'Percepção de Carga Administrativa', 'Escore Total de Indício de Burnout (20-100)', 'purple'),
+            'Apoio da Gestão vs. Burnout': ('b4_7_apoio_gestao_escolar', 'ET', 'Apoio da Gestão e Indício de Burnout', 'Percepção de Apoio da Gestão', 'Escore Total de Indício de Burnout (20-100)', 'green'),
+            'Lazer vs. Burnout': ('b2_3_tempo_energia_lazer', 'ET', 'Lazer e Indício de Burnout', 'Percepção de Tempo/Energia p/ Lazer', 'Escore Total de Indício de Burnout (20-100)', 'blue'),
+            'Autocuidado vs. Burnout': ('b2_2_frequencia_autocuidado', 'ET', 'Autocuidado e Indício de Burnout', 'Frequência de Autocuidado', 'Escore Total de Indício de Burnout (20-100)', 'darkgreen'),
+            'Burnout vs. Intenção de Abandonar': ('ET', 'b4_5_intencao_abandonar_profissao', 'Burnout e Intenção de Abandonar a Profissão', 'Escore Total de Indício de Burnout (20-100)', 'Intenção de Abandonar a Profissão', 'orange'),
+            'Autocuidado vs. Lazer': ('b2_2_frequencia_autocuidado', 'b2_3_tempo_energia_lazer', 'Correlação entre Autocuidado e Lazer', 'Frequência de Autocuidado', 'Percepção de Tempo/Energia para Lazer', 'blueviolet')
         }
 
         # <<< CORREÇÃO AQUI: Ajustado o nome da opção >>>
         opcoes_boxplot = {
             'Nenhum': None,
             'Gênero': ('b1_2_genero', 'Distribuição por Gênero', 'Gênero'),
-            'Violência no Trabalho (Sim/Não)': ('b4_4_violencia_trabalho', 'Exposição à Violência', 'Sofreu Violência'),
-            'Cultura de Feedback (Sim/Não)': ('b4_3_cultura_feedback', 'Cultura de Feedback', 'Possui Feedback'),
-            'Acompanhamento Saúde Mental (Sim/Não)': ('b2_1_acompanhamento_agrupado', 'Acompanhamento Saúde Mental (Agrupado Sim/Não)', 'Faz Acompanhamento'),
-            'Acompanhamento Saúde Mental (Psicológico e Psiquiátrico)': ('b2_1_acompanhamento_saude', 'Acompanhamento Saúde Mental (Psicológico e Psiquiátrico)', 'Tipo de Acompanhamento'),
+            'Violência no Trabalho (Sim/Não)': ('b4_4_violencia_trabalho', 'Exposição à Violência', 'Sofreu Violência?'),
+            'Cultura de Feedback (Sim/Não)': ('b4_3_cultura_feedback', 'Cultura de Feedback', 'A empresa adota cultura Feedback contínuos?'),
+            'Acompanhamento Saúde Mental (Sim/Não)': ('b2_1_acompanhamento_agrupado', 'Acompanhamento Saúde Mental (Agrupado Sim/Não)', 'Faz Acompanhamento de Saúde Mental?'),
+            'Acompanhamento Saúde Mental (Psicológico ou Psiquiátrico)': ('b2_1_acompanhamento_saude', 'Acompanhamento Saúde Mental (Psicológico e Psiquiátrico)', 'Faz Acompanhamento de Saúde Mental (Psicológico ou Psiquiátrico)?'),
             'Tipo de Instituição (Pública vs. Privada)': ('b3_7_grupo_instituicao', 'Instituição (Pública vs. Privada)', 'Tipo de Instituição'),
-            'Atuação no Ensino Superior (Sim/Não)': ('b3_3_nivel_ensino_Superior', 'Atuação no Ensino Superior', 'Leciona no Ens. Superior'),
-            'Atuação nos Anos Iniciais (Sim/Não)': ('b3_3_nivel_ensino_Anos_Iniciais', 'Atuação nos Anos Iniciais', 'Leciona nos Anos Iniciais')
+            'Atuação no Ensino Superior (Sim/Não)': ('b3_3_nivel_ensino_Superior', 'Atuação no Ensino Superior', 'Leciona no Ensino Superior:'),
+            'Atuação nos Anos Iniciais (Sim/Não)': ('b3_3_nivel_ensino_Anos_Iniciais', 'Atuação nos Anos Iniciais', 'Leciona nos Anos Iniciais?')
         }
 
         # SELETORES
