@@ -176,7 +176,7 @@ def plotar_boxplot(df_data, var_x_coluna, titulo, xlabel):
         plt.figure(figsize=(K * 3.5, 7))
         sns.boxplot(data=df_plot_final, x='Grupo_Label', y='ET', palette="Pastel1", order=order)
         sns.stripplot(data=df_plot_final, x='Grupo_Label', y='ET', color=".3", alpha=0.5, jitter=0.1, order=order)
-        plt.title(f"{titulo}", fontsize=16); plt.xlabel(xlabel, fontsize=12); plt.ylabel('Escore Total de Burnout (20-100)', fontsize=12)
+        plt.title(f"{titulo}", fontsize=16); plt.xlabel(xlabel, fontsize=12); plt.ylabel('Escore Total de Indício de Burnout (20-100)', fontsize=12)
         plt.xticks(rotation=15, ha='right'); plt.grid(True, linestyle='--', alpha=0.6, axis='y'); plt.tight_layout(); st.pyplot(plt)
 
     except Exception as e:
@@ -231,14 +231,14 @@ if df is not None and not df.empty:
         # Opções de Correlação (Pearson)
         opcoes_correlacao = {
             'Nenhum': None,
-            'Idade vs. Burnout': ('b1_1_idade', 'ET', 'Idade e Indício de Burnout', 'Idade (anos)', 'Escore Total de Burnout (20-100)', 'gray'),
-            'Tempo de Profissão vs. Burnout': ('b3_2_tempo_profissao', 'ET', 'Tempo de Profissão e Indício de Burnout', 'Tempo de Profissão (anos)', 'Escore Total de Burnout (20-100)', 'cyan'),
+            'Idade vs. Burnout': ('b1_1_idade', 'ET', 'Idade e Indício de Burnout', 'Idade (anos)', 'Escore Total de Indício de Burnout (20-100)', 'gray'),
+            'Tempo de Profissão vs. Burnout': ('b3_2_tempo_profissao', 'ET', 'Tempo de Profissão e Indício de Burnout', 'Tempo de Profissão (anos)', 'Escore Total de Indício de Burnout (20-100)', 'cyan'),
             'Carga Horária vs. Burnout': ('b3_5_carga_horaria', 'ET', 'Carga Horária e Indício de Burnout', 'Carga Horária Semanal (horas)', 'Escore Total de Burnout (20-100)', 'red'),
-            'Carga Administrativa vs. Burnout': ('b3_9_carga_administrativa', 'ET', 'Carga Administrativa e Indício de Burnout', 'Percepção Carga Administrativa (1-5)', 'Escore Total de Burnout (20-100)', 'purple'),
-            'Apoio da Gestão vs. Burnout': ('b4_7_apoio_gestao_escolar', 'ET', 'Apoio da Gestão e Indício de Burnout', 'Percepção Apoio da Gestão (1-5)', 'Escore Total de Burnout (20-100)', 'green'),
-            'Lazer vs. Burnout': ('b2_3_tempo_energia_lazer', 'ET', 'Lazer e Indício de Burnout', 'Percepção Tempo/Energia p/ Lazer (1-5)', 'Escore Total de Burnout (20-100)', 'blue'),
-            'Autocuidado vs. Burnout': ('b2_2_frequencia_autocuidado', 'ET', 'Autocuidado e Indício de Burnout', 'Frequência de Autocuidado (1-5)', 'Escore Total de Burnout (20-100)', 'darkgreen'),
-            'Burnout vs. Intenção de Abandonar': ('ET', 'b4_5_intencao_abandonar_profissao', 'Burnout e Intenção de Abandonar', 'Escore Total de Burnout (20-100)', 'Intenção de Abandonar (1-5)', 'orange'),
+            'Carga Administrativa vs. Burnout': ('b3_9_carga_administrativa', 'ET', 'Carga Administrativa e Indício de Burnout', 'Percepção Carga Administrativa (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'purple'),
+            'Apoio da Gestão vs. Burnout': ('b4_7_apoio_gestao_escolar', 'ET', 'Apoio da Gestão e Indício de Burnout', 'Percepção Apoio da Gestão (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'green'),
+            'Lazer vs. Burnout': ('b2_3_tempo_energia_lazer', 'ET', 'Lazer e Indício de Burnout', 'Percepção Tempo/Energia p/ Lazer (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'blue'),
+            'Autocuidado vs. Burnout': ('b2_2_frequencia_autocuidado', 'ET', 'Autocuidado e Indício de Burnout', 'Frequência de Autocuidado (1-5)', 'Escore Total de Indício de Burnout (20-100)', 'darkgreen'),
+            'Burnout vs. Intenção de Abandonar': ('ET', 'b4_5_intencao_abandonar_profissao', 'Burnout e Intenção de Abandonar', 'Escore Total de Indício de Burnout (20-100)', 'Intenção de Abandonar (1-5)', 'orange'),
             'Autocuidado vs. Lazer': ('b2_2_frequencia_autocuidado', 'b2_3_tempo_energia_lazer', 'Correlação entre Autocuidado e Lazer', 'Frequência de Autocuidado (1-5)', 'Percepção Tempo/EnergIA p/ Lazer (1-5)', 'blueviolet')
         }
 
