@@ -315,6 +315,26 @@ if df is not None and not df.empty:
                     <div class="metric-row"><span class="metric-label">Nível 5 (Fase Considerável)</span><span class="metric-value metric-value-n5">{count_n5}</span></div>
                     """, unsafe_allow_html=True)
                     st.markdown("<br>", unsafe_allow_html=True)
+                    st.markdown(f"""
+                    <style>
+                    /* ... (Seu código CSS de fonte 24px) ... */
+                    /* AQUI ESTÁ O CÓDIGO QUE FALTA */
+                    /* CSS para Tabela Vertical Customizada */
+                    .metric-row {{
+                        display: flex; flex-direction: row; justify-content: space-between; 
+                        align-items: center; border-bottom: 1px solid #DDDDDD; 
+                        padding: 12px 5px; 
+                    }}
+                    .metric-label {{
+                        font-size: 20px; color: #333333; /* Cor que faltava */
+                    }}
+                    .metric-value {{
+                        font-size: 26px; font-weight: 600; color: #333333; 
+                    }}
+                    .metric-value-n4 {{ color: #FF9800 !important; }}
+                    .metric-value-n5 {{ color: #F44336 !important; }}
+                    </style>
+                    """, unsafe_allow_html=True)
 
 
                     # Gráfico de Barras de Distribuição
