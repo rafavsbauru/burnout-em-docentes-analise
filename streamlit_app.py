@@ -299,8 +299,23 @@ if df is not None and not df.empty:
                 df_validos = df_filtrado[~df_filtrado['Nivel_Burnout'].isin(['Erro', 'Inválido', 'nan'])]
                 if not df_validos.empty:
                     st.markdown("### Distribuição Burnout")
-                    contagem_niveis = df_validos['Nivel_Burnout'].value_counts().sort_index()
-                    st.dataframe(contagem_niveis.rename('Frequência').to_frame(), use_container_width=True)
+                    contagem_niveis = df_validos['Nivel_Burnout'].value_counts()
+                    count_n1 = contagem_niveis.get('Nível 1', 0)
+                    count_n2 = contagem_niveis.get('Nível 2', 0)
+                    count_n3 = contagem_niveis.get('Nível 3', 0)
+                    count_n4 = contagem_niveis.get('Nível 4', 0)
+                    count_n5 = contagem_niveis.get('Nível 5', 0)
+
+                    st.markdown("##### Frequência (Nº de Professores) por Nível:")
+                    st.markdown(f"""
+                    <div class="metric-row"><span class="metric-label">Nível 1 (Nenhum Indício)</span><span class="metric-value">{count_n1}</span></div>
+                    <div class="metric-row"><span class="metric-label">Nível 2 (Possibilidade)</span><span class="metric-value">{count_n2}</span></div>
+                    <div class="metric-row"><span class="metric-label">Nível 3 (Fase Inicial)</span><span class="metric-value">{count_n3}</span></div>
+                    <div class="metric-row"><span class="metric-label">Nível 4 (Instalação)</span><span class="metric-value metric-value-n4">{count_n4}</span></div>
+                    <div class="metric-row"><span class="metric-label">Nível 5 (Fase Considerável)</span><span class="metric-value metric-value-n5">{count_n5}</span></div>
+                    """, unsafe_allow_html=True)
+                    st.markdown("<br>", unsafe_allow_html=True)
+
 
                     # Gráfico de Barras de Distribuição
                     try:
